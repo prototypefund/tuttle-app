@@ -2,7 +2,7 @@
 
 ## Build
 
-````
+```
 npx electron-forge make --arch=<arch> --platform=<platform>
 ```
 
@@ -12,6 +12,6 @@ where
 - `<platform>` is `darwin` (macOS), `linux`, ...
 
 
-````
+```
 npx electron-forge make --arch=arm64 --platform=darwin
 ```
