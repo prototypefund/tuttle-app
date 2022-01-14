@@ -1,8 +1,8 @@
 {
-  "name": "tuttle-app-electron",
-  "productName": "tuttle-app-electron",
+  "name": "Tuttle",
+  "productName": "Tuttle",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
