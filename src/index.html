@@ -13,8 +13,17 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.8.1"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
-    <!-- Stylesheets -->
+    <!-- Photon -->
     <link rel="stylesheet" href="../photon/css/photon.min.css">
+    <!-- Xel -->
+    <script src="../node_modules/xel/xel.js" type="module"></script>
+    <meta name="xel-theme" content="../node_modules/xel/themes/cupertino.css">
+    <meta name="xel-accent-color" content="graphite">
+    <meta name="xel-size" content="small">
+    <meta name="xel-iconset" content="node_modules/xel/iconsets/fluent.svg">
+
+
+
   </head>
 
   <body>
@@ -111,7 +120,31 @@
 
             <!-- main -->
             <div id="pyodide-demo">
-            
+
+              <!-- progress bar -->
+              <h2>Progress Bar</h2>
+              <x-progressbar></x-progressbar>
+
+              <!-- dialog button -->
+              <h2>Dialog</h2>
+              <x-button>
+                <x-label>Open Dialog</x-label>
+                <dialog></dialog>
+              </x-button>
+              
+              <style>
+                dialog {
+                  width: 300px;
+                  height: 100%;
+                  right: 0;
+                  left: auto;
+                  border-top-right-radius: 0;
+                  border-bottom-right-radius: 0;
+                }
+              </style>
+
+              <!-- Python REPL -->
+              <h2>Python REPL</h2>
               <p>
                 You can execute any Python code. Just enter something in the box below and
                 click the button.
@@ -170,6 +203,7 @@
               </script>
             </div>
 
+            <h2>Table</h2>
             <table class="table-striped">
               <thead>
                 <tr>
@@ -203,7 +237,7 @@
               </tbody>
             </table>
 
-
+            <h2>Plot</h2>
             <div id="vis"></div>
             <script>
               (function(vegaEmbed) {
